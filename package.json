@@ -7,9 +7,10 @@
     "start": "vite"
   },
   "dependencies": {
-    "@suid/material": "*",
     "@suid/icons-material": "*",
-    "solid-js": "*"
+    "@suid/material": "*",
+    "solid-js": "*",
+    "svg-path-morph": "^1.0.5"
   },
   "devDependencies": {
     "@suid/vite-plugin": "*",
