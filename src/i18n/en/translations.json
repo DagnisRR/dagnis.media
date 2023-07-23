@@ -1,9 +1,10 @@
 {
     "hello_world": "Hello world!",
     "source_code": "Source Code",
-    "about": "ABOUT",
-    "projects": "PROJECTS",
-    "email": "EMAIL",
-    "colophon": "COLOPHON",
-    "navigation": "NAVIGATION"
+    "about": "About",
+    "projects": "Projects",
+    "email": "Email",
+    "colophon": "Colophon",
+    "navigation": "Navigation",
+    "contact_us": "Contact us"
 }

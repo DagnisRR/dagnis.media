@@ -23,7 +23,6 @@ export default function BasicAppBar() {
               <A
                 href="/about"
                 class="hover-underline-animation"
-                color="inherit"
                 style="text-decoration: none"
               >
                 {language.about}
@@ -50,7 +49,6 @@ export default function BasicAppBar() {
               <A
                 href="/projects"
                 class="hover-underline-animation"
-                color="inherit"
                 style="text-decoration: none"
               >
                 {language.projects}

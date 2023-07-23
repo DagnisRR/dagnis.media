@@ -1,9 +1,10 @@
 {
     "hello_world": "Čau pasaule!",
     "source_code": "GitHub Kods",
-    "about": "PAR MUMS",
-    "projects": "PROJEKTI",
-    "email": "E-PASTS",
-    "colophon": "IZMANTOTIE PAPILDRĪKI",
-    "navigation": "LAPAS"
+    "about": "Par mums",
+    "projects": "Projekti",
+    "email": "E-pasts",
+    "colophon": "Izmantotie rīki",
+    "navigation": "Lapas",
+    "contact_us": "Sazinieties ar mums"
 }

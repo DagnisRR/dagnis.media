@@ -16,6 +16,7 @@ const languageTemplate = {
   email: '',
   colophon: '',
   navigation: '',
+  contact_us: '',
 };
 
 export const [language, setLanguage] = createStore(languageTemplate);
