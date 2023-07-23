@@ -2,5 +2,8 @@
     "hello_world": "Hello world!",
     "source_code": "Source Code",
     "about": "ABOUT",
-    "projects": "PROJECTS"
+    "projects": "PROJECTS",
+    "email": "EMAIL",
+    "colophon": "COLOPHON",
+    "navigation": "NAVIGATION"
 }

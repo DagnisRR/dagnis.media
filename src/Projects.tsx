@@ -3,15 +3,20 @@ import { theme } from './components/Theme';
 import { ThemeProvider } from '@suid/material/styles';
 import Footer from './components/Footer';
 import Background from './components/Background';
+import { Container, Box } from '@suid/material';
 
-export default function App() {
+export default function Projects() {
   return (
     <ThemeProvider theme={theme}>
+      {/* 
       <BasicAppBar />
-      <Background />
+      <Container>
+        <Box></Box>
+      </Container>
+  */}
       <Footer />
     </ThemeProvider>
   );
 }
 
-//TODO: Big text
+//TODO: Create Bingo and way to open it from projects

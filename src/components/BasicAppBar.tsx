@@ -1,7 +1,11 @@
 import LanguageSelect from './LanguageSelect';
 import { language } from '../i18n/i18n';
 import './BasicAppBar.css';
-import { AppBar, Box, Button, Toolbar, Typography, Link } from '@suid/material';
+import './Theme.css';
+import { AppBar, Box, Button, Toolbar, Typography } from '@suid/material';
+import { A } from '@solidjs/router';
+
+//FIXME: Could use more BasicAppBar.css
 
 export default function BasicAppBar() {
   return (
@@ -16,14 +20,14 @@ export default function BasicAppBar() {
               component="div"
               sx={{ paddingTop: '1.2rem', marginLeft: 'auto' }}
             >
-              <Link
-                href="https://youtube.com"
+              <A
+                href="/about"
                 class="hover-underline-animation"
                 color="inherit"
-                sx={{ textDecoration: 'none' }}
+                style="text-decoration: none"
               >
                 {language.about}
-              </Link>
+              </A>
             </Typography>
             <Typography
               class="disable-select"
@@ -38,20 +42,19 @@ export default function BasicAppBar() {
             </Typography>
 
             <Typography
-              class="disable-select"
               style="font-family:'Cinzel', serif;"
               variant="h6"
               component="div"
               sx={{ paddingTop: '1.2rem', marginRight: 'auto' }}
             >
-              <Link
-                href="https://youtube.com"
+              <A
+                href="/projects"
                 class="hover-underline-animation"
                 color="inherit"
-                sx={{ textDecoration: 'none' }}
+                style="text-decoration: none"
               >
                 {language.projects}
-              </Link>
+              </A>
             </Typography>
             {/* @ts-ignore */}
             <Button

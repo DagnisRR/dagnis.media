@@ -7,8 +7,10 @@
     "start": "vite"
   },
   "dependencies": {
+    "@solidjs/router": "^0.8.2",
     "@suid/icons-material": "*",
     "@suid/material": "*",
+    "animejs": "^3.2.1",
     "solid-js": "*",
     "svg-path-morph": "^1.0.5"
   },
