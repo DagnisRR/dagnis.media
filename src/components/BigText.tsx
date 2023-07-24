@@ -5,43 +5,71 @@ import { language } from '../i18n/i18n';
 import { For } from 'solid-js';
 import anime from 'animejs/lib/anime.es.js';
 
-//TODO: Make text shake.
+//TODO Clean this up, maybe in a class and with OOP?
 
-function getOffset(el) {
-  const rect = el.getBoundingClientRect();
-  return {
-    left: rect.left + window.scrollX,
-    top: rect.top + window.scrollY,
-  };
+function getTop(el) {
+  return el.offsetTop + (el.offsetParent && getTop(el.offsetParent));
 }
+
+function getLeft(el) {
+  return el.offsetLeft + (el.offsetParent && getLeft(el.offsetParent));
+}
+
+function getX(el) {
+  return getLeft(el) + el.offsetWidth / 2;
+}
+
+function getY(el) {
+  return getTop(el) + el.offsetHeight / 2;
+}
+
 export default function BigText() {
   function randomPositionLoop() {
     anime({
       targets: '.char',
       translateX: function () {
-        return anime.random(-3, 3);
+        return anime.random(-5, 5);
       },
       translateY: function () {
-        return anime.random(-2, 2);
+        return anime.random(-5, 5);
       },
-      duration: 300,
+      rotate: function () {
+        return anime.random(-10, 10);
+      },
+      duration: 2000,
       easing: 'linear',
       complete: randomPositionLoop,
     });
   }
   randomPositionLoop();
-  function track(e) {
-    console.log('X - ', e.pageX, ' Y - ', e.pageY);
-  }
-  addEventListener('mousemove', track, false);
+  //CHANGE Calculate vectors
+  //function track(mouse) {
+  //  anime({
+  //    targets: '.char',
+  //    translateX: function (char) {
+  //      let offsetX = mouse.pageX - getX(char);
+  //      offsetX = 0 ? 1 : offsetX;
+  //      return 100 / -offsetX;
+  //    },
+  //    translateY: function (char) {
+  //      let offsetY = mouse.pageY - getY(char);
+  //      offsetY = 0 ? 1 : offsetY;
+  //      return 100 / -offsetY;
+  //    },
+  //    duration: 1000,
+  //    autoplay: true,
+  //    loop: false,
+  //  });
+  //}
+  //addEventListener('mousemove', track, false);
   return (
     <div style="position: absolute; width: 100%; height: 100%">
       <Typography
         variant="h1"
         class="disable-select"
-        sx={{ color: grey[900], marginTop: '15%', marginLeft: '0.5em' }}
+        sx={{ color: grey[900], marginTop: '15%' }}
       >
-        <div style="position: relative; width: 100%; display: flex; justify-content: flex-start">
+        <div style="padding-left: 0.5em; padding-right: 0.5em; position: relative; width: calc(100% - 1em); display: flex; justify-content: flex-start; flex-wrap: wrap">
           <For each={language.quote_1.split('')}>
             {(char, i) => <div class="char">{char}</div>}
           </For>

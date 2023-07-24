@@ -19,7 +19,7 @@ export default function Footer() {
   onMount(() => {
     var form = document.getElementById('contact-form');
 
-    //FIXME: Doesn't work.
+    //BUG Form doesn't work.
 
     function submitForm(event) {
       console.log(loading);
@@ -187,6 +187,7 @@ export default function Footer() {
                       </li>
                     </ul>
                   </nav>
+                  {/*
                   <div class="collumn column-padding" style="margin-top: 1em">
                     <Typography variant="subtitle1" sx={{ color: grey[500] }}>
                       {language.contact_us}
@@ -197,7 +198,7 @@ export default function Footer() {
                       autocomplete="off"
                       name="contact"
                       id="contact-form"
-                      netlify
+                      //CHANGE netlify
                     >
                       <TextField
                         id="contact-message"
@@ -242,6 +243,7 @@ export default function Footer() {
                       </div>
                     </form>
                   </div>
+                            */}
                 </div>
               </div>
             </div>

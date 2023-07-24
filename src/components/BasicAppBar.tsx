@@ -5,7 +5,7 @@ import './Theme.css';
 import { AppBar, Box, Button, Toolbar, Typography } from '@suid/material';
 import { A } from '@solidjs/router';
 
-//FIXME: Could use more BasicAppBar.css
+//FIXME Could use more BasicAppBar.css
 
 export default function BasicAppBar() {
   return (
@@ -50,6 +50,7 @@ export default function BasicAppBar() {
                 href="/projects"
                 class="hover-underline-animation"
                 style="text-decoration: none; color: #fff"
+                id="test123"
               >
                 {language.projects}
               </A>

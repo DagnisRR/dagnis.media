@@ -1,4 +1,4 @@
-// TODO: Translations could be loaded on the server, but it's not that important for a small app.
+// TODO Translations could be loaded on the server, but it's not that important for a small app.
 import en from './en/translations.json';
 import lv from './lv/translations.json';
 
