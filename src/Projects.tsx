@@ -1,12 +1,19 @@
-import BasicAppBar from './components/BasicAppBar';
+import { language } from './i18n/i18n';
 import { theme } from './components/Theme';
 import { ThemeProvider } from '@suid/material/styles';
+
 import Footer from './components/Footer';
 import Background from './components/Background';
-import { Container, Box } from '@suid/material';
+import BasicAppBar from './components/BasicAppBar';
 
 export default function Projects() {
-  return <div style="width: 10px; height: 10px; background-color: blue"></div>;
+  return (
+    <ThemeProvider theme={theme}>
+      <BasicAppBar />
+      <Background />
+      <Footer />
+    </ThemeProvider>
+  );
 }
 
 //TODO Create Bingo and way to open it from projects

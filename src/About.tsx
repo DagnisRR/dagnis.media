@@ -2,8 +2,6 @@ import { language } from './i18n/i18n';
 import { theme } from './components/Theme';
 import { ThemeProvider } from '@suid/material/styles';
 
-import Button from '@suid/material/Button/Button';
-
 import Footer from './components/Footer';
 import Background from './components/Background';
 import BasicAppBar from './components/BasicAppBar';

@@ -11,7 +11,7 @@ export default function AppContent() {
     anime({
       targets: target,
       translateY: 50,
-      duration: 1500,
+      duration: 1000,
       easing: 'easeInElastic(1, .4)',
       loop: true,
       direction: 'alternate',

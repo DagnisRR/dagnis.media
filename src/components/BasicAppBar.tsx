@@ -29,15 +29,20 @@ export default function BasicAppBar() {
               </A>
             </Typography>
             <Typography
-              class="disable-select"
               style="font-family:'Cinzel', serif; text-align:center; line-height:0.7;"
               variant="h4"
               component="div"
               sx={{ paddingTop: '1rem' }}
             >
-              DAGNIS
-              <br />
-              MEDIA
+              <A
+                href="/"
+                class="hover-underline-animation"
+                style="padding-bottom: 6px; text-decoration: none; color: #fff"
+              >
+                DAGNIS
+                <br />
+                MEDIA
+              </A>
             </Typography>
 
             <Typography
@@ -50,7 +55,6 @@ export default function BasicAppBar() {
                 href="/projects"
                 class="hover-underline-animation"
                 style="text-decoration: none; color: #fff"
-                id="test123"
               >
                 {language.projects}
               </A>

@@ -16,6 +16,7 @@ import { A } from '@solidjs/router';
 export default function Footer() {
   const [loading, setLoading] = createSignal(false);
 
+  /*
   onMount(() => {
     var form = document.getElementById('contact-form');
 
@@ -33,6 +34,7 @@ export default function Footer() {
     }
     form.addEventListener('submit', submitForm);
   });
+*/
   return (
     <footer style="padding-top: 15em">
       <div>
@@ -162,6 +164,17 @@ export default function Footer() {
                       {language.navigation}
                     </Typography>
                     <ul>
+                      <li>
+                        <Typography variant="subtitle1" component="div">
+                          <A
+                            href="/"
+                            class="link hover-underline-animation"
+                            style="text-decoration: none"
+                          >
+                            dagnis.media
+                          </A>
+                        </Typography>
+                      </li>
                       <li>
                         <Typography variant="subtitle1" component="div">
                           <A

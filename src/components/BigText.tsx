@@ -2,7 +2,7 @@ import { Typography } from '@suid/material';
 import { grey } from '@suid/material/colors';
 import './Theme.css';
 import { language } from '../i18n/i18n';
-import { For } from 'solid-js';
+import { For, onMount, onCleanup } from 'solid-js';
 import anime from 'animejs/lib/anime.es.js';
 
 //TODO Clean this up, maybe in a class and with OOP?
@@ -24,24 +24,33 @@ function getY(el) {
 }
 
 export default function BigText() {
-  function randomPositionLoop() {
-    anime({
-      targets: '.char',
-      translateX: function () {
-        return anime.random(-5, 5);
-      },
-      translateY: function () {
-        return anime.random(-5, 5);
-      },
-      rotate: function () {
-        return anime.random(-10, 10);
-      },
-      duration: 2000,
-      easing: 'linear',
-      complete: randomPositionLoop,
+  onMount(() => {
+    let cleanup = false;
+    function randomPositionLoop() {
+      if (cleanup) {
+        return;
+      }
+      anime({
+        targets: '.char',
+        translateX: function () {
+          return anime.random(-5, 5);
+        },
+        translateY: function () {
+          return anime.random(-5, 5);
+        },
+        rotate: function () {
+          return anime.random(-10, 10);
+        },
+        duration: 2000,
+        easing: 'linear',
+        complete: randomPositionLoop,
+      });
+    }
+    randomPositionLoop();
+    onCleanup(() => {
+      cleanup = true;
     });
-  }
-  randomPositionLoop();
+  });
   //CHANGE Calculate vectors
   //function track(mouse) {
   //  anime({
