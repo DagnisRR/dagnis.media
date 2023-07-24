@@ -1,5 +1,3 @@
-//TODO: Make a footer.
-
 import logo from '../assets/logo-greyscale.png';
 import {
   Typography,
@@ -36,7 +34,7 @@ export default function Footer() {
     form.addEventListener('submit', submitForm);
   });
   return (
-    <footer>
+    <footer style="padding-top: 15em">
       <div>
         <div class="row">
           <div class="columm">
@@ -203,20 +201,20 @@ export default function Footer() {
                     >
                       <TextField
                         id="contact-message"
-                        label="Message"
+                        label={language.message}
                         defaultValue=""
                         variant="filled"
                         size="small"
                         style="margin-right: 1em; width: 15ch"
                         multiline
-                        rows={6}
+                        rows={4}
                       />
                       <div class="row">
                         <ul style="margin-top: 0px">
                           <li>
                             <TextField
                               id="contact-email"
-                              label="Email"
+                              label={language.email}
                               defaultValue=""
                               variant="filled"
                               size="small"
@@ -236,7 +234,7 @@ export default function Footer() {
                                 type="submit"
                                 style="width: 100%; margin-top: 1em"
                               >
-                                Send
+                                {language.send}
                               </Button>
                             </Show>
                           </li>
