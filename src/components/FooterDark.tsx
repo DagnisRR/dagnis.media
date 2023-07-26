@@ -127,6 +127,18 @@ export default function FooterDark() {
                           Solid Router
                         </Link>
                       </li>
+                      <li>
+                        <Link
+                          href="https://netlify.com"
+                          target="popup"
+                          variant="subtitle1"
+                          color={'inherit'}
+                          class="link-dark link-underline-dark"
+                          sx={{ textDecoration: 'none' }}
+                        >
+                          Netlify
+                        </Link>
+                      </li>
                     </ul>
                   </div>
                   <nav class="collumn column-padding" style="margin-top: 1em">
