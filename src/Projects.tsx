@@ -10,7 +10,7 @@ export default function Projects() {
   return (
     <ThemeProvider theme={theme}>
       <BasicAppBar />
-      <div style="background: linear-gradient(0deg, rgba(255,0,100,1) 0%, rgba(244,67,54,1) 60%); top: 60.5px; position: absolute">
+      <div style="background: linear-gradient(0deg, rgba(244,67,30,1) 0%, rgba(244,67,54,1) 60%); top: 60.5px; position: absolute">
         <BigText {...{ text: 'coming_soon', variant: 'h1' }} />
         <FooterDark />
       </div>
