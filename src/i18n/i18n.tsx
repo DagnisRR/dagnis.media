@@ -1,4 +1,4 @@
-// TODO Translations could be loaded on the server, but it's not that important for a small app.
+// TODO Translations could be loaded on the server (not important for a small app)
 import en from './en/translations.json';
 import lv from './lv/translations.json';
 
@@ -20,6 +20,10 @@ const languageTemplate = {
   message: '',
   send: '',
   quote_1: '',
+  quote_2: '',
+  about_summary: '',
+  about_text1: '',
+  coming_soon: '',
 };
 
 export const [language, setLanguage] = createStore(languageTemplate);

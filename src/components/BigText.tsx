@@ -5,7 +5,7 @@ import { language } from '../i18n/i18n';
 import { For, onMount, onCleanup } from 'solid-js';
 import anime from 'animejs/lib/anime.es.js';
 
-//TODO Clean this up, maybe in a class and with OOP?
+//TODO Move functions to class
 
 function getTop(el) {
   return el.offsetTop + (el.offsetParent && getTop(el.offsetParent));
@@ -23,7 +23,7 @@ function getY(el) {
   return getTop(el) + el.offsetHeight / 2;
 }
 
-export default function BigText() {
+export default function BigText(props) {
   onMount(() => {
     let cleanup = false;
     function randomPositionLoop() {
@@ -72,14 +72,14 @@ export default function BigText() {
   //}
   //addEventListener('mousemove', track, false);
   return (
-    <div style="position: absolute; width: 100%; height: 100%">
+    <div style="width: 100%; height: 100%">
       <Typography
-        variant="h1"
+        variant={props.variant}
         class="disable-select"
-        sx={{ color: grey[900], marginTop: '15%' }}
+        sx={{ color: grey[900], marginTop: '12%' }}
       >
         <div style="padding-left: 0.5em; padding-right: 0.5em; position: relative; width: calc(100% - 1em); display: flex; justify-content: flex-start; flex-wrap: wrap">
-          <For each={language.quote_1.split('')}>
+          <For each={language[props.text].split('')}>
             {(char, i) => <div class="char">{char}</div>}
           </For>
         </div>

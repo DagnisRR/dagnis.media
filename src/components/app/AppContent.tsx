@@ -1,4 +1,4 @@
-import { language } from '../i18n/i18n';
+import { language } from '../../i18n/i18n';
 import { Button } from '@suid/material';
 import { A } from '@solidjs/router';
 import { SouthRounded } from '@suid/icons-material';
@@ -10,16 +10,16 @@ export default function AppContent() {
   onMount(() => {
     anime({
       targets: target,
-      translateY: 50,
+      translateY: 20,
       duration: 1000,
-      easing: 'easeInElastic(1, .4)',
+      easing: 'easeInElastic(1, .5)',
       loop: true,
       direction: 'alternate',
       autoplay: true,
     });
   });
   return (
-    <div style="display: block">
+    <div style="display: block; margin-top: 9rem">
       <div
         ref={target}
         style="display: flex; justify-content:center; font-weight: 100"
@@ -27,8 +27,8 @@ export default function AppContent() {
         <SouthRounded
           sx={{
             color: '#f44336',
-            fontSize: '8rem',
-            marginBottom: '4rem',
+            fontSize: '3rem',
+            marginBottom: '1.5rem',
           }}
         />
       </div>

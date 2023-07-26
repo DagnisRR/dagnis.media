@@ -1,3 +1,3 @@
 # **dagnis.media**
 
-> ### _An experimental website using SolidJS and Material UI!_
+> ### _An experimental website using SolidJS_

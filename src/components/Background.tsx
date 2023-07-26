@@ -71,12 +71,11 @@ export default function Background() {
     onCleanup(() => cancelAnimationFrame(frame));
   });
   return (
-    <div style="width:100%; height:100%">
+    <div style="width:100%; height:100%; position: absolute">
       <svg
         id="visual"
         viewBox="0 0 960 540"
         width="100%"
-        height="100%"
         xmlns="http://www.w3.org/2000/svg"
         version="1.1"
       >

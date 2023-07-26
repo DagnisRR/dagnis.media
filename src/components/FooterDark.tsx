@@ -1,30 +1,10 @@
-import logo from '../assets/logo-cropped-greyscale.png';
+import logo from '../assets/logo-cropped.png';
 import { Typography, Link } from '@suid/material';
-import { grey } from '@suid/material/colors';
 import { language } from '../i18n/i18n';
 import './Footer.css';
 import { A } from '@solidjs/router';
 
-export default function Footer() {
-  /*
-  onMount(() => {
-    var form = document.getElementById('contact-form');
-
-    //BUG Form doesn't work
-
-    function submitForm(event) {
-      console.log(loading);
-      setLoading(true);
-      setTimeout(() => {
-        console.log(loading);
-        setLoading(false);
-      }, 5000);
-      console.log(loading);
-      event.preventDefault();
-    }
-    form.addEventListener('submit', submitForm);
-  });
-*/
+export default function FooterDark() {
   return (
     <footer style="padding-top: 5em">
       <div>
@@ -32,17 +12,14 @@ export default function Footer() {
           <div class="columm">
             <div class="row" style="justify-content: center">
               <div class="logo-column column">
-                <div
-                  style="border-right: 1px solid #9e9e9e"
-                  class="logo-container"
-                >
+                <div class="logo-container-dark">
                   <img src={logo} class="logo disable-select" />
                   <Typography
                     fontFamily={'Cinzel, serif'}
                     variant="h4"
                     class="disable-select"
                     sx={{
-                      color: grey[500],
+                      color: '#ffcdd2',
                       lineHeight: 0.7,
                       textAlign: 'center',
                     }}
@@ -58,7 +35,7 @@ export default function Footer() {
                     style="text-wrap: wrap"
                     sx={{
                       display: 'block',
-                      color: grey[500],
+                      color: '#ffcdd2',
                       maxWidth: '40%',
                       marginLeft: 'auto',
                       marginRight: 'auto',
@@ -74,29 +51,29 @@ export default function Footer() {
               <div class="content-column column">
                 <div class="row">
                   <div class="collumn column-padding" style="margin-top: 1em">
-                    <Typography variant="subtitle1" sx={{ color: grey[500] }}>
+                    <Typography variant="subtitle1" sx={{ color: '#ffcdd2' }}>
                       {language.email}
                     </Typography>
                     <ul>
                       <li>
-                        <Typography variant="subtitle1">
+                        <Typography style="color: #fff" variant="subtitle1">
                           drremesis@gmail.com
                         </Typography>
                       </li>
                     </ul>
                   </div>
                   <div class="collumn column-padding" style="margin-top: 1em">
-                    <Typography variant="subtitle1" sx={{ color: grey[500] }}>
+                    <Typography variant="subtitle1" sx={{ color: '#ffcdd2' }}>
                       {language.colophon}
                     </Typography>
-                    <ul>
+                    <ul style="color: #fff">
                       <li>
                         <Link
                           href="https://www.solidjs.com/"
                           target="popup"
                           variant="subtitle1"
                           color={'inherit'}
-                          class="link-light link-underline-light"
+                          class="link-dark link-underline-dark"
                           sx={{ textDecoration: 'none' }}
                         >
                           SolidJS
@@ -108,7 +85,7 @@ export default function Footer() {
                           target="popup"
                           variant="subtitle1"
                           color={'inherit'}
-                          class="link-light link-underline-light"
+                          class="link-dark link-underline-dark"
                           sx={{ textDecoration: 'none' }}
                         >
                           SUID
@@ -120,7 +97,7 @@ export default function Footer() {
                           target="popup"
                           variant="subtitle1"
                           color={'inherit'}
-                          class="link-light link-underline-light"
+                          class="link-dark link-underline-dark"
                           sx={{ textDecoration: 'none' }}
                         >
                           anime.js
@@ -132,7 +109,7 @@ export default function Footer() {
                           target="popup"
                           variant="subtitle1"
                           color={'inherit'}
-                          class="link-light link-underline-light"
+                          class="link-dark link-underline-dark"
                           sx={{ textDecoration: 'none' }}
                         >
                           svg-path-morph
@@ -144,7 +121,7 @@ export default function Footer() {
                           target="popup"
                           variant="subtitle1"
                           color={'inherit'}
-                          class="link-light link-underline-light"
+                          class="link-dark link-underline-dark"
                           sx={{ textDecoration: 'none' }}
                         >
                           Solid Router
@@ -153,7 +130,7 @@ export default function Footer() {
                     </ul>
                   </div>
                   <nav class="collumn column-padding" style="margin-top: 1em">
-                    <Typography variant="subtitle1" sx={{ color: grey[500] }}>
+                    <Typography variant="subtitle1" sx={{ color: '#ffcdd2' }}>
                       {language.navigation}
                     </Typography>
                     <ul>
@@ -161,7 +138,7 @@ export default function Footer() {
                         <Typography variant="subtitle1" component="div">
                           <A
                             href="/"
-                            class="link-light link-underline-light"
+                            class="link-dark link-underline-dark"
                             style="text-decoration: none"
                           >
                             dagnis.media
@@ -172,7 +149,7 @@ export default function Footer() {
                         <Typography variant="subtitle1" component="div">
                           <A
                             href="/about"
-                            class="link-light link-underline-light"
+                            class="link-dark link-underline-dark"
                             style="text-decoration: none"
                           >
                             {language.about}
@@ -183,7 +160,7 @@ export default function Footer() {
                         <Typography variant="subtitle1" component="div">
                           <A
                             href="/projects"
-                            class="link-light link-underline-light"
+                            class="link-dark link-underline-dark"
                             style="text-decoration: none"
                           >
                             {language.projects}
@@ -192,63 +169,6 @@ export default function Footer() {
                       </li>
                     </ul>
                   </nav>
-                  {/*
-                  <div class="collumn column-padding" style="margin-top: 1em">
-                    <Typography variant="subtitle1" sx={{ color: grey[500] }}>
-                      {language.contact_us}
-                    </Typography>
-
-                    <form
-                      style="display: flex; margin-top: 1em; text-align: center"
-                      autocomplete="off"
-                      name="contact"
-                      id="contact-form"
-                      //CHANGE netlify
-                    >
-                      <TextField
-                        id="contact-message"
-                        label={language.message}
-                        defaultValue=""
-                        variant="filled"
-                        size="small"
-                        style="margin-right: 1em; width: 15ch"
-                        multiline
-                        rows={4}
-                      />
-                      <div class="row">
-                        <ul style="margin-top: 0px">
-                          <li>
-                            <TextField
-                              id="contact-email"
-                              label={language.email}
-                              defaultValue=""
-                              variant="filled"
-                              size="small"
-                              style="width: 15ch"
-                            />
-                          </li>
-
-                          <li>
-                            <Show
-                              when={loading}
-                              fallback={
-                                <CircularProgress style="margin-top: 1em" />
-                              }
-                            >
-                              <Button
-                                variant="outlined"
-                                type="submit"
-                                style="width: 100%; margin-top: 1em"
-                              >
-                                {language.send}
-                              </Button>
-                            </Show>
-                          </li>
-                        </ul>
-                      </div>
-                    </form>
-                  </div>
-                            */}
                 </div>
               </div>
             </div>

@@ -5,7 +5,7 @@ import './Theme.css';
 import { AppBar, Box, Button, Toolbar, Typography } from '@suid/material';
 import { A } from '@solidjs/router';
 
-//FIXME Could use more BasicAppBar.css
+//FIXME Move styles to BasicAppBar.css
 
 export default function BasicAppBar() {
   return (
