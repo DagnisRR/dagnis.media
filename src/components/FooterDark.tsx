@@ -6,7 +6,7 @@ import { A } from '@solidjs/router';
 
 export default function FooterDark() {
   return (
-    <footer style="padding-top: 5em">
+    <footer style="padding-top: 10em">
       <div>
         <div class="row">
           <div class="columm">

@@ -41,7 +41,7 @@ export default function BigText(props) {
         rotate: function () {
           return anime.random(-10, 10);
         },
-        duration: 2000,
+        duration: 1000,
         easing: 'linear',
         complete: randomPositionLoop,
       });

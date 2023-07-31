@@ -26,7 +26,7 @@ export default function Footer() {
   });
 */
   return (
-    <footer style="padding-top: 5em">
+    <footer style="padding-top: 10em">
       <div>
         <div class="row">
           <div class="columm">

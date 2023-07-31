@@ -19,7 +19,7 @@ export default function AppContent() {
     });
   });
   return (
-    <div style="display: block; margin-top: 9rem">
+    <div style="display: block; margin-top: 20rem">
       <div
         ref={target}
         style="display: flex; justify-content:center; font-weight: 100"

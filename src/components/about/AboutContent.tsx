@@ -5,7 +5,7 @@ export default function AboutContent() {
   return (
     <Typography
       variant="subtitle1"
-      style="margin-top: 8rem"
+      style="margin-top: 20rem"
       sx={{ paddingLeft: '20%', paddingRight: '20%' }}
     >
       <b>{language.about_summary}</b>
