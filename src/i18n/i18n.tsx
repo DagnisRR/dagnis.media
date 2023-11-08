@@ -28,9 +28,10 @@ const languageTemplate = {
 
 export const [language, setLanguage] = createStore(languageTemplate);
 
+//INFO language[0] = en, language[1] = lv
 if ((document.cookie = '')) {
-  setLanguage(languages[0]);
-  document.cookie = 'language=0';
+  setLanguage(languages[1]);
+  document.cookie = 'language=1';
 } else {
   setLanguage(
     languages[Number(document.cookie.charAt(document.cookie.length - 1))]
