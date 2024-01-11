@@ -5,7 +5,7 @@ import lv from './lv/translations.json';
 import { createStore } from 'solid-js/store';
 import { createSignal } from 'solid-js';
 
-export const [currentLanguage, setCurrentLanguage] = createSignal(0);
+export const [currentLanguage, setCurrentLanguage] = createSignal(1);
 
 const languages = [en, lv];
 const languageTemplate = {
@@ -29,7 +29,8 @@ const languageTemplate = {
 export const [language, setLanguage] = createStore(languageTemplate);
 
 //INFO language[0] = en, language[1] = lv
-if ((document.cookie = '')) {
+if (document.cookie == '') {
+  console.log('SETLANGUAGE');
   setLanguage(languages[1]);
   document.cookie = 'language=1';
 } else {
