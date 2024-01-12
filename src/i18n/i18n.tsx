@@ -30,7 +30,6 @@ export const [language, setLanguage] = createStore(languageTemplate);
 
 //INFO language[0] = en, language[1] = lv
 if (document.cookie == '') {
-  console.log('SETLANGUAGE');
   setLanguage(languages[1]);
   document.cookie = 'language=1';
 } else {
