@@ -57,7 +57,7 @@ export default function FooterDark() {
                     <ul>
                       <li>
                         <Typography style="color: #fff" variant="subtitle1">
-                          drremesis@gmail.com
+                          buisness@dagnis.media
                         </Typography>
                       </li>
                     </ul>

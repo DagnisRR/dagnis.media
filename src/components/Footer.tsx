@@ -80,7 +80,7 @@ export default function Footer() {
                     <ul>
                       <li>
                         <Typography variant="subtitle1">
-                          drremesis@gmail.com
+                          buisness@dagnis.media
                         </Typography>
                       </li>
                     </ul>
